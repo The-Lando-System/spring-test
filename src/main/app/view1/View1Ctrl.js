@@ -2,11 +2,25 @@
 
 angular.module('myapp').controller('view1Controller', view1Controller);
 
-function view1Controller() {
+view1Controller.$inject = ['testFactory'];
+
+function view1Controller(testFactory) {
 	
-	var view1Vm = this;
+	var vm = this;
 	
-	view1Vm.hello = "Hello from view 1!";
+	vm.hello = "Hello from view 1!";
+	vm.testCall = testCall;
+	vm.testData = {};
+	
+	function testCall(){
+		testFactory.getHelloObj()
+		.success(function(data){
+			vm.testData = data;
+		})
+		.error(function(err){
+		});
+	};
+	
 };
 
 })();

@@ -14,13 +14,13 @@ function config($urlRouterProvider,$stateProvider,$locationProvider) {
 		url: '/view1',
 		templateUrl: '/testapp/app/view1/view1.html',
 		controller: 'view1Controller',
-		controllerAs: 'view1Vm'
+		controllerAs: 'vm'
 	})
 	.state('view2', {
 		url: '/view2',
 		templateUrl: '/testapp/app/view2/view2.html',
 		controller: 'view2Controller',
-		controllerAs: 'view2Vm'
+		controllerAs: 'vm'
 	});
 };
 

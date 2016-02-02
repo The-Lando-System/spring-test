@@ -15,7 +15,10 @@
 	<!-- My App JS Files -->
 	<script src="<c:url value="app/myapp.module.js" />"></script>
 	<script src="<c:url value="app/config/states.js" />"></script>
+	<script src="<c:url value="app/factories/ExceptionFactory.js" />"></script>
+	<script src="<c:url value="app/factories/TestFactory.js" />"></script>
 	<script src="<c:url value="app/directives/navbar.js" />"></script>
+	<script src="<c:url value="app/directives/errorMessage.js" />"></script>
 	<script src="<c:url value="app/view1/View1Ctrl.js" />"></script>
 	<script src="<c:url value="app/view2/View2Ctrl.js" />"></script>
 	
