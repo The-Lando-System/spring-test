@@ -10,15 +10,20 @@ function view1Controller(testFactory) {
 	
 	vm.hello = "Hello from view 1!";
 	vm.testCall = testCall;
-	vm.testData = {};
+	vm.tableData = false;
+	vm.errorMessage = false;
 	
 	function testCall(){
-		testFactory.getHelloObj()
-		.success(function(data){
-			vm.testData = data;
-		})
-		.error(function(err){
-		});
+		vm.errorMessage = false;
+		testFactory.getHelloObj(successCallback,errorCallback);
+	};
+	
+	function successCallback(data){
+		vm.tableData = data;
+	};
+	
+	function errorCallback(err){
+		vm.errorMessage = err;
 	};
 	
 };

@@ -17,21 +17,8 @@
 		</div>
 	</div>
 </div>
-<div class="row">
+<div class="row" ng-show="vm.tableData">
 	<div class="container">
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Property</th>
-					<th>Value</th>
-				</tr>
-			</thead>
-		    <tbody>
-				<tr ng-repeat="(key, value) in vm.testData">
-					<td>{{key}}</td>
-					<td>{{value}}</td>
-				</tr>
-			</tbody>
-		</table>
+		<object-table></object-table>
 	</div>
 </div>

@@ -9,21 +9,20 @@ function view2Controller(testFactory) {
 	
 	vm.hello = "Hello from view 2!";
 	vm.testCall = testCall;
-	vm.testData = {};
+	vm.tableData = false;
 	vm.errorMessage = false;
 	
 	function testCall(){
 		vm.errorMessage = false;
 		testFactory.getWorldObj(successCallback,errorCallback);
-		
-		function successCallback(data){
-			vm.testData = data;
-		};
-		
-		function errorCallback(err){
-			vm.errorMessage = err;
-		};
-		
+	};
+	
+	function successCallback(data){
+		vm.tableData = data;
+	};
+	
+	function errorCallback(err){
+		vm.errorMessage = err;
 	};
 };
 

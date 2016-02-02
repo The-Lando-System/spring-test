@@ -1,6 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>My App</title>
 	
 	<base href="/testapp/">
 	
@@ -19,11 +24,12 @@
 	<script src="<c:url value="app/factories/TestFactory.js" />"></script>
 	<script src="<c:url value="app/directives/navbar.js" />"></script>
 	<script src="<c:url value="app/directives/errorMessage.js" />"></script>
+	<script src="<c:url value="app/directives/objectTable.js" />"></script>
 	<script src="<c:url value="app/view1/View1Ctrl.js" />"></script>
 	<script src="<c:url value="app/view2/View2Ctrl.js" />"></script>
 	
 	<!-- My CSS Deps -->
-	<link rel="stylesheet" href="<c:url value="app/css/main.css" />"></link>
+	<link rel="stylesheet" href="<c:url value="app/css/main.css" />">
 
 </head>
 

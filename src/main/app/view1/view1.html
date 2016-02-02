@@ -8,23 +8,17 @@
 		<div class="col-md-2">
 			<button class="btn btn-primary btn-large" ng-click="vm.testCall()">Make Service Call</button>
 		</div>
+		<div class="col-md-6">
+			<div ng-show="vm.errorMessage">
+				<error-message></error-message>
+			</div>
+		</div>
+		<div class="col-md-4">
+		</div>
 	</div>
 </div>
-<div class="row">
+<div class="row" ng-show="vm.tableData">
 	<div class="container">
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Property</th>
-					<th>Value</th>
-				</tr>
-			</thead>
-		    <tbody>
-				<tr ng-repeat="(key, value) in vm.testData">
-					<td>{{key}}</td>
-					<td>{{value}}</td>
-				</tr>
-			</tbody>
-		</table>
+		<object-table></object-table>
 	</div>
 </div>
