@@ -2,9 +2,9 @@
 
 angular.module('myapp').factory('testFactory', testFactory);
 
-testFactory.$inject = ['$http','exception'];
+testFactory.$inject = ['$http','exceptionFactory'];
 
-function testFactory($http, exception) {
+function testFactory($http, exceptionFactory) {
 	return {
         getHelloObj: getHelloObj,
         getWorldObj: getWorldObj
@@ -16,7 +16,7 @@ function testFactory($http, exception) {
     		return successCallback(data);
     	})
     	.error(function(error){
-    		var err = exception.catchSvcException(error);
+    		var err = exceptionFactory.catchSvcException(error);
     		return errorCallback(err.name + err.message);
     	});
     };
@@ -27,7 +27,7 @@ function testFactory($http, exception) {
     		return successCallback(data);
     	})
     	.error(function(error){
-    		var err = exception.catchSvcException(error);
+    		var err = exceptionFactory.catchSvcException(error);
     		return errorCallback(err.name + err.message);
     	});
     };

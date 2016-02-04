@@ -1,8 +1,8 @@
 (function() { 'use strict';
 
-angular.module('myapp').factory('exception', exception);
+angular.module('myapp').factory('exceptionFactory', exceptionFactory);
 
-function exception() {
+function exceptionFactory() {
 	return {
 		catchSvcException: catchSvcException
     };
